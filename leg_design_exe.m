@@ -122,7 +122,7 @@ for i = 1:size(ex_span,2)
     for j = 1:i
         del = delta(i,j);
         exten = extension(i,j);
-        J = Jcb(delta(i,j),extension(i,j));
+        J = Jcb_P(delta(i,j),extension(i,j));
         sig_min(i,j) = sqrt(min(eig((J*J'))));
         sig_max(i,j) = sqrt(max(eig((J'*J))));
     end
